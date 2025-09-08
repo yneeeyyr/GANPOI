@@ -48,14 +48,6 @@ torchsummary==1.5.1
                   --batch 16 --epochs 200 --name exp1
   ```
 
-## Citation
-
-```
-@inproceedings{10.1145/3477495.3531983,
-  author = {Yang, Song and Liu, Jiamou and Zhao, Kaiqi},
-  title = {GETNext: Trajectory Flow Map Enhanced Transformer for Next POI Recommendation},
-  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
-  pages = {1144–1153},
   series = {SIGIR '22}
 }
 
