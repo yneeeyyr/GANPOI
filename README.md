@@ -1,9 +1,8 @@
 # GETNext
 
-This is the pytorch implementation of paper "GETNext: Trajectory Flow Map Enhanced Transformer for Next POI
-Recommendation"
+This is the pytorch implementation of paper "GANPOI: A Multi-factor Generative Adversarial Framework for POI Recommendation"
 
-![model-structure](figures/model-structure.png)
+![1](GANPOI.png)
 
 ## Installation
 
@@ -30,15 +29,13 @@ torchsummary==1.5.1
 
 ## Train
 
-- Unzip `dataset/NYC.zip` to `dataset/NYC`. The three files are training data, validation data, test data.
-
 - Run `build_graph.py` to construct the user-agnostic global trajectory flow map from the training data.
 
 - Train the model using python `train.py`. All hyper-parameters are defined in `param_parser.py`
 
   ```
   python train.py --data-train dataset/NYC/NYC_train.csv
-                  --data-val dataset/NYC/NYC_val.csv
+                  --data-val dataset/NYC/NYC_test.csv
                   --time-units 48 --time-feature norm_in_day_time
                   --poi-embed-dim 128 --user-embed-dim 128 
                   --time-embed-dim 32 --cat-embed-dim 32
@@ -47,17 +44,4 @@ torchsummary==1.5.1
                   --transformer-nlayers 2 --transformer-nhead 2
                   --batch 16 --epochs 200 --name exp1
   ```
-
-## Citation
-
-```
-@inproceedings{10.1145/3477495.3531983,
-  author = {Yang, Song and Liu, Jiamou and Zhao, Kaiqi},
-  title = {GETNext: Trajectory Flow Map Enhanced Transformer for Next POI Recommendation},
-  booktitle = {Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval},
-  pages = {1144–1153},
-  series = {SIGIR '22}
-}
-
-```
 
