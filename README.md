@@ -1,4 +1,4 @@
-# GETNext
+# GANPOI
 
 This is the pytorch implementation of paper "GANPOI: A Multi-factor Generative Adversarial Framework for POI Recommendation"
 
